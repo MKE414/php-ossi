@@ -8,7 +8,7 @@ require_once 'Avaya/CM.php';
 
 $cm = Avaya_CM::getInstance();
 
-$cm->connect('10.29.66.15', 5023, 'ossiread', 'IamReadOnly');
+$cm->connect('serverip', port, 'user', 'password');
 
 $protocol = $cm->getProtocol();
 
@@ -17,7 +17,7 @@ $protocol = $cm->getProtocol();
 
 //$data = $protocol->monitorSystem();
 $data = $protocol->monitorSkill('135');
-//$data = $protocol->getAgentLog(14141114501);
+//$data = $protocol->getAgentLog(agentid);
 //$data = $protocol->listAgents();
 
 echo "<pre>";
